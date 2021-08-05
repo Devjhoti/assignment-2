@@ -1,0 +1,164 @@
+/*-_-_-_-_-_-_-
+     fonts 
+_-_-_-_-_-_-*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+/*---------
+ ANIMATIONS 
+ ----------*/
+ @keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+
+/*-$-$-$-$-$-$-$ 
+  Common Styles
+ $_$_$_$_$_$_$*/
+ body{
+     font-family:  'Poppins', sans-serif;;
+     margin: 0;
+    }
+    body a{
+        text-decoration: none;
+        color: white;
+    }
+    header{
+         background-color: #2D25A0;
+         color: white;
+     }
+
+
+ /*o00o0o0o0o0o0o0o 
+    TOP PART starts
+ 0o0o0o0o0o0o0o0o0o*/
+
+ /*----------------
+  navigation styles
+  -----------------*/
+ nav{
+     display: flex;
+     padding-top: 52px;
+     padding-right: 124px;
+     padding-left: 156px;
+     justify-content: space-evenly;
+    }
+    .links{
+        flex-grow: 1;
+
+    }
+    .links>a{
+     
+     
+     font-size:16px ;
+     margin-right:36px ;
+ }
+ .login-button{
+    position: static;
+    background-color: #E02C6D;
+    padding: 10px 24px;
+    }
+ .fa-sign-in-alt{
+     margin-right: 8px;
+ }
+            /*---------------------- 
+            TOP BANNER STYLES STARTS 
+            -----------------------*/
+.top-banner{
+    display: flex;
+    padding-right: 140.99px;
+    
+}
+.copa-cup{
+    display: none;
+    position:absolute;
+}
+.copa-intro{
+    padding-left: 156px;
+    flex-grow: 1;
+    line-height: 27px;
+}
+.copa-intro>p{
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 80px;
+}
+.watch-button{
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 168px;
+    height: 44px;
+    background-color:  #E02C6D;
+    padding: 10px 0px 10px 35px;
+    margin-bottom: 169px;
+    
+    
+}
+.fa-broadcast-tower{
+    font-size: 24px;
+}
+.animated-photo>img{
+    width: 556.01px;
+    height: 438px;
+}
+
+/* TRANSFORMS AND TRANSITIONS */
+.top-banner:hover .animated-photo>img{
+    transform-origin: right;
+    transform: rotate(60deg) scale(.4);
+    transition: transform 1s ease-in-out .5s;
+}
+.top-banner:hover .copa-intro {
+    transform: translateX(800px);
+    transition: transform 1s ease-in-out .5s;
+}
+.top-banner:hover .copa-cup{
+    display: block;
+    
+    animation-name: fade-in;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+
+    transform: translateX(200px);
+    transition: transform 1.5s ease-in .5s;
+}
+            /*--------------------
+            TOP BANNER STYLE ENDS 
+             ---------------------*/
+
+           /*-----------------
+            GRID PART STARTS   
+            -----------------*/
+main{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+.players{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 27px;
+    
+}
+.player{
+    height: 474px;
+    width: 300px;
+    box-shadow: 5px 5px 40px rgba(128, 128, 128, 0.377);
+    padding: 15px;
+    
+}
+
+.player img{
+    width: 300px;
+    height: 256px;
+}
+.player h2{
+    font-size: 28px;
+    font-weight: 700;
+}           
