@@ -2,6 +2,7 @@
      fonts 
 _-_-_-_-_-_-*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 /*---------
  ANIMATIONS 
  ----------*/
@@ -13,7 +14,44 @@ _-_-_-_-_-_-*/
         opacity: 100;
     }
 }
-
+@keyframes disco{
+    0%{
+        color:#2D25A0 ;
+    }
+    25%{
+        color: #E02C6D;
+    }
+    50%{
+        color: cadetblue;    
+    }
+    75%{
+        color: orange;
+    }
+    100%{
+        color: #2D25A0;
+    }
+}
+@keyframes ZoomIO{
+    0%{
+        
+        transform: scale(1.7);
+    }
+    
+    100%{
+        
+        transform: scale(2);
+    }
+}
+@keyframes bounce{
+    0%{
+        transform: translateY(0px);
+        
+    }
+    100%{
+        transform: translateY(10px);
+        
+    }
+}
 /*-$-$-$-$-$-$-$ 
   Common Styles
  $_$_$_$_$_$_$*/
@@ -28,6 +66,7 @@ _-_-_-_-_-_-*/
     header{
          background-color: #2D25A0;
          color: white;
+         width: 100%;
      }
 
 
@@ -110,11 +149,13 @@ _-_-_-_-_-_-*/
 .top-banner:hover .animated-photo>img{
     transform-origin: right;
     transform: rotate(60deg) scale(.4);
-    transition: transform 1s ease-in-out .5s;
+    transition: transform 1s ease-in .5s;
+
 }
 .top-banner:hover .copa-intro {
     transform: translateX(800px);
-    transition: transform 1s ease-in-out .5s;
+    transition: transform 1s ease-in .5s;
+    
 }
 .top-banner:hover .copa-cup{
     display: block;
@@ -161,4 +202,128 @@ main{
 .player h2{
     font-size: 28px;
     font-weight: 700;
-}           
+}
+
+
+/*0o0o0o0o0o0o0o0o 
+HighLights Section  
+0o0o0o0o0o0o0o0o0o*/
+.highlights{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 200px;
+}
+.highlights-intro{
+    padding-top: 40px;
+
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-direction: alternate;
+}
+.highlights-intro h1{
+    position:absolute ;
+
+    
+
+    animation-name: ZoomIO,disco;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-direction:alternate ;
+}
+.highlights-videos{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+}
+iframe{
+    width: 300px;
+    height: 150px;
+}
+
+/*0o0o0o0o0o0o0o0o 
+    FOOTER STYLES
+ 0o0o0o0o0o0o0o0o*/
+ footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 158px;
+}
+.footer-logo img{
+    width: 483.87px;
+    height: 110px;
+}
+.fab, .far{
+    box-shadow: 2px 2px 10px gray;
+    background-color: #E7E7E8;
+    border-radius: 14.94px;
+    padding: 7.47px;
+    font-size: 17.07px;
+    margin-right: 14px;
+    color:  #969BAB;
+}
+
+/*0o0o0o0o0o0o0o 
+    MEDIA QUERY
+ 0o0o0o0o0o0o0o0o*/
+
+ @media only screen and (max-width: 688px){
+     nav{
+         display: none;
+     }
+     header{
+         margin-right: 0;
+     }
+     .top-banner{
+         
+         flex-direction: column;
+         padding-bottom: 62px;
+     }
+     .copa-intro{
+         padding: 16px;
+         margin: 0;
+     }
+     .copa-intro p{
+         font-size: 36px;
+         line-height: 50px;
+     }
+     .watch-button{
+         margin-bottom: 50px;
+     }
+     .animated-photo{
+         padding: 0px 15px;
+     }
+     .animated-photo img{
+         height: 259.17px;
+         width: 329px;
+     }
+     .players{
+         grid-template-columns: repeat(1,1fr);
+     }
+     .highlights{
+         flex-direction: column;
+         margin-top: 70px;
+         
+     }
+     .highlights-intro{
+         padding-top: 0;
+         margin-top: 0;
+         padding-left: 100px;
+         margin-bottom: 200px;
+     }
+     .highlights-videos{
+         display: flex;
+         margin-top: 40px;
+         
+         overflow-x: scroll;
+         overflow-y: hidden;
+     }
+     .footer-logo img{
+         width:275.8px ;
+         height: 63px;
+     }
+ }
